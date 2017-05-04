@@ -1,5 +1,6 @@
 
 dump_date=20170420
+dump_dir="/mnt/data/xmldatadumps/public"
 
 ################################################################################
 ####################      Datasets       #######################################
@@ -84,7 +85,7 @@ datasets/monthly_bot_edits/zhwiki_20170427.tsv:
 
 datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/enwiki/$(dump_date)/enwiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/$(dump_date)/enwiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2
@@ -107,7 +108,7 @@ datasets/monthly_bot_reverts/enwiki_$(dump_date).tsv: \
 
 datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/dewiki/$(dump_date)/dewiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/dewiki/$(dump_date)/dewiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/dewiki_$(dump_date)_reverts.json.bz2
@@ -131,7 +132,7 @@ datasets/monthly_bot_reverts/dewiki_$(dump_date).tsv: \
 
 datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/frwiki/$(dump_date)/frwiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/frwiki/$(dump_date)/frwiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/frwiki_$(dump_date)_reverts.json.bz2
@@ -155,7 +156,7 @@ datasets/monthly_bot_reverts/frwiki_$(dump_date).tsv: \
 
 datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/jawiki/$(dump_date)/jawiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/jawiki/$(dump_date)/jawiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/jawiki_$(dump_date)_reverts.json.bz2
@@ -178,7 +179,7 @@ datasets/monthly_bot_reverts/jawiki_$(dump_date).tsv: \
 
 datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/eswiki/$(dump_date)/eswiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/eswiki/$(dump_date)/eswiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/eswiki_$(dump_date)_reverts.json.bz2
@@ -201,7 +202,7 @@ datasets/monthly_bot_reverts/eswiki_$(dump_date).tsv: \
 
 datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/zhwiki/$(dump_date)/zhwiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/zhwiki/$(dump_date)/zhwiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/zhwiki_$(dump_date)_reverts.json.bz2
@@ -224,7 +225,7 @@ datasets/monthly_bot_reverts/zhwiki_$(dump_date).tsv: \
 
 datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  /mnt/data/xmldatadumps/public/ptwiki/$(dump_date)/ptwiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/ptwiki/$(dump_date)/ptwiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/ptwiki_$(dump_date)_reverts.json.bz2
