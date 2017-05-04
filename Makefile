@@ -85,7 +85,7 @@ datasets/monthly_bot_edits/zhwiki_20170427.tsv:
 
 datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2:
 	mwreverts dump2reverts \
-	  $(dump_dir)/$(dump_date)/enwiki-$(dump_date)-stub-meta-history?*.xml.gz \
+	  $(dump_dir)/enwiki/$(dump_date)/enwiki-$(dump_date)-stub-meta-history?*.xml.gz \
 	  --radius 15 --use-sha1 --resort | \
 	bzip2 -c > \
 	datasets/reverts/enwiki_$(dump_date)_reverts.json.bz2
